@@ -16,15 +16,15 @@ func _ready():
 func _physics_process(delta):
 	                #Управление
 	     #Вправо
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("right"):
 		motion.x=speed;
 	     #Влево
-	elif Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("left"):
 		motion.x=-speed;
 		
 	else: motion.x=0;
 	if is_on_floor():
-		if Input.is_action_pressed("ui_up"):
+		if Input.is_action_pressed("up"):
 			motion.y=-jump;
 	else:
 		motion.y+=g; #Ускорение падения
